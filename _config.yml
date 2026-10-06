@@ -2,13 +2,13 @@
 title: Hunter's Portfolio
 subtitle: Games Programmer
 email: 
-description: I make games, 3D art & more!
+description: Computer Games Programmer
 baseurl: "" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
 
 # homepage tiles
-tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 8
+tiles-source: posts # accepts "posts" or "pages"
+tiles-count: 6
 
 # social settings (key must match name of font awesome icon)
 # see https://fontawesome.com/icons?d=gallery&p=2&s=brands
@@ -17,6 +17,7 @@ tiles-count: 8
 socials:
   GitHub: https://github.com/HunterReaper13
   LinkedIn: https://www.linkedin.com/in/jaden-pollard-39700a399/
+  itch-io: https://hunterthereaper.itch.io/
 
 # build settings
 markdown: kramdown

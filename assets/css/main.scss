@@ -4,8 +4,43 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
-@import 'font-awesome.min.css';
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('../fonts/ZenKakuGothicNew-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('../fonts/ZenKakuGothicNew-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('../fonts/ZenKakuGothicNew-Medium.ttf') format('truetype');
+    font-weight: 600;   /* Forty uses 600 for headings and bold, so Medium is mapped here */
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('../fonts/ZenKakuGothicNew-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Zen Kaku Gothic New';
+    src: url('../fonts/ZenKakuGothicNew-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
 
 /*
 	Forty by HTML5 UP
@@ -79,12 +114,80 @@
 	@import 'layout/wrapper';
 	@import 'layout/menu';
 
-	#header {
-  display: flex;
-  align-items: center;
+	#header nav ul.icons {
+    li {
+        padding: 0;
+        margin: 0;
+    }
+
+    li a {
+        padding: 0 0.25em;   // gap between icons
+    }
+
+    .icon.alt:before {
+        background: none;
+        border-radius: 0;
+        color: #fff;
+        font-size: 1.8em;
+        width: auto;
+        height: auto;
+        line-height: 1;
+    }
+
+    .icon.alt:hover:before {
+        color: #9BF1FF;
+    }
 }
 
-#header .icons {
-  margin: 0 6em 0 auto;
-  padding: 0;
+#banner h1 {
+    font-weight: 300;
+}
+
+#banner > .inner .content > p {
+    font-weight: 900;
+}
+
+.media-row {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    margin-bottom: 2em;
+
+    .media {
+        flex: 0 0 45%;          // media width; adjust to taste
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        &.video {
+            position: relative;
+            aspect-ratio: 16 / 9;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .text {
+        flex: 1;
+    }
+
+    // stack on phones, with the media always above the text
+    @media (max-width: 736px) {
+        flex-direction: column;
+
+        .media {
+            flex: none;
+            width: 100%;
+            order: -1;
+        }
+    }
 }
