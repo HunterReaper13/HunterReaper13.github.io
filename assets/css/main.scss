@@ -78,3 +78,13 @@
 	@import 'layout/footer';
 	@import 'layout/wrapper';
 	@import 'layout/menu';
+
+	#header {
+  display: flex;
+  align-items: center;
+}
+
+#header .icons {
+  margin: 0 6em 0 auto;
+  padding: 0;
+}
