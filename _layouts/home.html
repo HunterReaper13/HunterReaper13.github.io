@@ -19,17 +19,10 @@
                 <h1>{{ page.landing-title }}</h1>
             </header>
             <div class="content">
-			<ul class="icons">
-				{% for key_value in site.socials %}
-					{% if key_value[1] %}
-						<li>
-							<a href="{{ key_value[1] }}" class="icon alt fa-{{ key_value[0] | downcase }}" target="_blank" rel="noopener noreferrer" aria-label="{{ key_value[0] }}">
-								<span class="label">{{ key_value[0] }}</span>
-							</a>
-						</li>
-					{% endif %}
-				{% endfor %}
-			</ul>
+                <p style="text-transform: uppercase;">{{ site.description }}</p>
+                <ul class="actions">
+                   <!-- <li><a href="#one" class="button next scrolly">Get Started</a></li>-->
+                </ul>
             </div>
         </div>
     </section>
