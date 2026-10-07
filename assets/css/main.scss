@@ -191,3 +191,8 @@
         }
     }
 }
+
+.media-row.about-row .media {
+    flex: 0 0 320px;      // picture width; change this number to resize
+    max-width: 320px;
+}
